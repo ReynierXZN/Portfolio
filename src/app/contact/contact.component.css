@@ -1,0 +1,74 @@
+.contact-root {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin: 40px;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .contact-sub {
+    color: var(--muted);
+    max-width: 700px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .contact-card {
+    background: var(--glass);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.4);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  .contact-card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .contact-card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .contact-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .contact-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+  
+  .contact-card a {
+    color: var(--accent-2);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .contact-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Reuse same animation as About */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
